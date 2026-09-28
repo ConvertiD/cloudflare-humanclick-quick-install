@@ -1,0 +1,16 @@
+name = "humanclicks-verify"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+# Covers every current and future landing page on the domain.
+# Replace example.com with your domain before deploying from the CLI.
+routes = [
+  { pattern = "example.com/*", zone_name = "example.com" }
+]
+
+[vars]
+# Your HumanClicks ingest URL
+HUMANCLICKS_ENDPOINT = "https://vjkirvetnyxjagodlicx.supabase.co/functions/v1/click"
+
+# Store the secret outside this file:
+#   wrangler secret put HUMANCLICKS_API_KEY
